@@ -10,11 +10,11 @@ export function getUrl(event: Event) {
     const query = ([...formElements] as HTMLInputElement[]).find((formElement) => {
         return formElement.id === ELEMENTS.QUERY;
     }).value;
-    const type = ([...formElements] as HTMLInputElement[]).find((formElement) => {
+    const typeElement = ([...formElements] as HTMLInputElement[]).find((formElement) => {
        return formElement.name === ELEMENTS.GIT && formElement.checked;
     });
 
-    if (type.id === ELEMENTS.GITHUB) {
+    if (typeElement.id === ELEMENTS.GITHUB) {
         return `https://api.github.com/search/repositories?q=${query}`;
     }
 
