@@ -1,1 +1,1 @@
-# rxjs_netology
+npm i && npm start
